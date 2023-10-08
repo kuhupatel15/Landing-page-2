@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: #717171;
+}
+#left{ 
+    height: 100%;
+    width: 40%;
+}
+#right{
+    position: absolute;
+    left: 60%;
+    top: -20%;
+    height: 145%;
+    width: 90%;
+    opacity: 0;
+    background-image: url(oranges.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 60%;
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#nav{
+    position: relative;
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    color: #fff;
+    font-family: gilroy;
+    width: 100%;
+    top: 4%;
+}
+#nav i{
+    position: absolute;
+    right: 30px;
+}
+#title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 30px;
+    gap: 10px;
+    top: 0;
+}
+#title img{
+    width: 35px;
+    height: 35px;
+}
+#nlinks{
+    position: absolute;
+    display: flex;
+    gap: 70px;
+    left: 45%;
+    align-items: center;
+    justify-content: center;
+}
+#nlinks a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    
+}
+#ricon{
+    position: absolute;
+    right: 30px;
+    font-size: 25px;
+}
+#bnav{
+    position: absolute;
+    display: flex;
+    left: 30px;
+    bottom:  4%;
+    width: 45%;
+    justify-content: space-between;
+    color: #fff;
+    font-family: gilroy;
+}
+#bnav h2{
+    letter-spacing: 2px;
+}
+#bnav i{
+    font-size: 25px;
+}
+#scroll{
+    display: flex;
+    position: absolute;
+    top: 55%;
+    left: -3%;
+    gap: 8px;
+    transform: rotate(90deg);
+    width: 150px;
+    color: #fff;
+    
+}
+#scroll i{
+    font-size: 10px;
+}
+#txt{
+    position: absolute;
+    left: 45%;
+    top: 20%;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;   
+    color: #fff; 
+    gap: 20px;
+    opacity:0;
+    animation-name: light;
+    animation-duration:2s ;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+#txt button{
+    width: 140px;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 200;
+}
+#txt h1{
+    font-size: 45px;
+    font-family: 'Cormorant garamond';
+}
+#txt h5{
+    opacity: .9;
+    font-family: gilroy;
+    font-weight: 100;
+}
+#txt h2{
+    font-size: 30px;
+    font-family: voyage;
+    letter-spacing: 3px;
+}
+#image{
+    position: absolute;
+    top: 18%;
+    left: 6%;
+    width: 38%;
+    height: 70%;
+    opacity: 0;
+    background-image: url(orange-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+    animation-name: slide2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#title #o:hover{
+    transform: rotate(180deg);
+}
+#txt button:hover{
+    background-color: #fff;
+    color: #717171;
+}
+#nlinks a:hover{
+    border-bottom: 2px solid #fff;
+    opacity: .6;
+}
+@keyframes slide {
+    0%{
+        opacity: 0;
+        
+        width: 0;
+    }
+    100%{
+        opacity: 1;
+        
+        width: 90%;
+    }
+}
+@keyframes light {
+    0%{
+        opacity: 0;
+         
+    }
+    100%{
+        opacity:1;
+         
+    }
+    
+}
+@keyframes slide2 {
+    0%{
+        width: 0%;
+        height: 0;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        height: 70%;
+        width: 38%;
+    }
+}
